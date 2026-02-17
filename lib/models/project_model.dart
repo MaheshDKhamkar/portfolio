@@ -42,108 +42,107 @@ class ProjectModel {
     this.completedDate,
   });
 
-  /// Sample projects data
+  /// Projects data
   static List<ProjectModel> get samples => [
     ProjectModel(
-      name: 'E-Commerce Mobile App',
+      name: 'MulkMed – Telemedicine Mobile Application',
       description:
-          'A full-featured e-commerce mobile application with user authentication, product catalog, shopping cart, and payment integration. Implemented using clean architecture and BLoC state management.',
-      technologies: ['Flutter', 'BLoC', 'Firebase', 'Stripe', 'REST API'],
-      screenshots: [
-        'assets/images/projects/ecommerce_1.png',
-        'assets/images/projects/ecommerce_2.png',
-      ],
-      githubUrl: 'https://github.com/johndoe/ecommerce-app',
-      playStoreUrl:
-          'https://play.google.com/store/apps/details?id=com.example.ecommerce',
-      appStoreUrl: 'https://apps.apple.com/app/id123456789',
-      status: ProjectStatus.completed,
-      completedDate: DateTime(2024, 12, 15),
-    ),
-    ProjectModel(
-      name: 'Fitness Tracking App',
-      description:
-          'Health and fitness tracking application with workout plans, nutrition tracking, progress analytics, and social features. Features include real-time data sync and offline support.',
-      technologies: ['Flutter', 'GetX', 'Hive', 'Charts', 'Firebase'],
-      screenshots: [
-        'assets/images/projects/fitness_1.png',
-        'assets/images/projects/fitness_2.png',
-      ],
-      githubUrl: 'https://github.com/johndoe/fitness-tracker',
-      playStoreUrl:
-          'https://play.google.com/store/apps/details?id=com.example.fitness',
-      status: ProjectStatus.completed,
-      completedDate: DateTime(2024, 10, 20),
-    ),
-    ProjectModel(
-      name: 'Social Media Dashboard',
-      description:
-          'A comprehensive social media management dashboard for scheduling posts, analytics, and engagement tracking across multiple platforms. Built with Flutter Web.',
+          'Comprehensive telemedicine solution with two applications:\n\n'
+          'Patient App: Appointment booking, video consultations with real-time chat, digital wallet, prescriptions, AI health tracking, multi-language support (RTL), and Traveler Mode.\n\n'
+          'Doctor App: Appointment management, patient records, video consultations, status workflows, and real-time notifications.\n\n'
+          'Delivered a scalable end-to-end telemedicine solution for seamless doctor–patient interaction.',
       technologies: [
-        'Flutter Web',
-        'Riverpod',
-        'GraphQL',
-        'Node.js',
-        'MongoDB',
+        'Flutter',
+        'GetX',
+        'REST API',
+        'Video Calling',
+        'Real-time Chat',
+        'Firebase',
+        'Multi-language Support',
+        'Digital Wallet',
       ],
       screenshots: [
-        'assets/images/projects/dashboard_1.png',
-        'assets/images/projects/dashboard_2.png',
+        'assets/images/mulkmed patient.png',
+        'assets/images/patient.png',
       ],
-      githubUrl: 'https://github.com/johndoe/social-dashboard',
-      webUrl: 'https://social-dashboard.example.com',
-      status: ProjectStatus.completed,
-      completedDate: DateTime(2024, 8, 5),
-    ),
-    ProjectModel(
-      name: 'Recipe Sharing Platform',
-      description:
-          'A beautiful recipe sharing platform where users can discover, share, and save recipes. Features include image recognition for ingredients and AI-powered recipe recommendations.',
-      technologies: ['Flutter', 'BLoC', 'ML Kit', 'Firebase', 'Algolia'],
-      screenshots: [
-        'assets/images/projects/recipe_1.png',
-        'assets/images/projects/recipe_2.png',
-      ],
-      githubUrl: 'https://github.com/johndoe/recipe-platform',
       playStoreUrl:
-          'https://play.google.com/store/apps/details?id=com.example.recipe',
+          'https://play.google.com/store/apps/details?id=com.mulkeHealth.patienteHealth&pcampaignid=web_share',
       status: ProjectStatus.inProgress,
     ),
     ProjectModel(
-      name: 'Task Management System',
+      name: 'Watch Your Health (Web Admin Panel)',
       description:
-          'Enterprise-level task management system with team collaboration, time tracking, and project planning features. Supports real-time updates and notifications.',
+          'Developed Flutter Web admin panel to manage 5K+ users and health data. Integrated dashboards, analytics, and OTP authentication for secure access. Built responsive layouts with bulk-data upload and API-driven reporting, reducing manual work by 25%.',
+      technologies: [
+        'Flutter Web',
+        'REST API',
+        'OTP Authentication',
+        'Dashboards',
+        'Analytics',
+        'Responsive Design',
+      ],
+      screenshots: [
+        // 'assets/images/projects/health_admin_1.png',
+        // 'assets/images/projects/health_admin_2.png',
+      ],
+      // webUrl: '',
+      status: ProjectStatus.completed,
+    ),
+    ProjectModel(
+      name: 'Dating Application',
+      description:
+          'Built complete Flutter UI with reusable widgets following Material Design principles. Integrated REST APIs for real-time profiles, chats, and notifications. Used GetX for efficient state management, ensuring high performance and maintainability.',
+      technologies: [
+        'Flutter',
+        'GetX',
+        'REST API',
+        'Real-time Chat',
+        'Notifications',
+        'Material Design',
+      ],
+      screenshots: [
+        'assets/images/projects/dating_1.png',
+        'assets/images/projects/dating_2.png',
+      ],
+      status: ProjectStatus.completed,
+    ),
+    ProjectModel(
+      name: 'Pawspace (Pet Care Services App)',
+      description:
+          'Redesigned Flutter UI/UX, improving booking completion rate by 20%. Integrated REST APIs for scheduling, payments, and user management. Enhanced accessibility and app flow for a seamless user experience.',
+      technologies: [
+        'Flutter',
+        'REST API',
+        'Payment Integration',
+        'Scheduling',
+        'Material Design',
+      ],
+      screenshots: [
+        'assets/images/projects/pawspace_1.png',
+        'assets/images/projects/pawspace_2.png',
+      ],
+      playStoreUrl:
+          "https://play.google.com/store/apps/details?id=com.app.pawspace&pcampaignid=web_share ",
+      status: ProjectStatus.completed,
+    ),
+    ProjectModel(
+      name: 'The Organic World (E-Commerce App)',
+      description:
+          'Built marketplace for 1.5K+ organic products with advanced product filters. Implemented cart, checkout, and order-tracking modules using Provider for scalable state management. Optimized widget rebuilds and lazy loading, improving UI rendering time by 30%.',
       technologies: [
         'Flutter',
         'Provider',
-        'WebSockets',
-        'PostgreSQL',
-        'Docker',
+        'REST API',
+        'Payment Integration',
+        'Order Tracking',
       ],
       screenshots: [
-        'assets/images/projects/task_1.png',
-        'assets/images/projects/task_2.png',
+        'assets/images/projects/organic_world_1.png',
+        'assets/images/projects/organic_world_2.png',
       ],
-      githubUrl: 'https://github.com/johndoe/task-manager',
-      webUrl: 'https://tasks.example.com',
-      status: ProjectStatus.completed,
-      completedDate: DateTime(2024, 6, 30),
-    ),
-    ProjectModel(
-      name: 'Weather Forecast App',
-      description:
-          'Beautiful weather application with hourly and weekly forecasts, weather alerts, and location-based recommendations. Features stunning animations and intuitive UI.',
-      technologies: ['Flutter', 'BLoC', 'OpenWeatherMap API', 'Geolocator'],
-      screenshots: [
-        'assets/images/projects/weather_1.png',
-        'assets/images/projects/weather_2.png',
-      ],
-      githubUrl: 'https://github.com/johndoe/weather-app',
       playStoreUrl:
-          'https://play.google.com/store/apps/details?id=com.example.weather',
-      appStoreUrl: 'https://apps.apple.com/app/id987654321',
+          "https://play.google.com/store/apps/details?id=com.tow.b2c&pcampaignid=web_share",
       status: ProjectStatus.completed,
-      completedDate: DateTime(2024, 4, 12),
     ),
   ];
 

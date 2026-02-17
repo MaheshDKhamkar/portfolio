@@ -9,6 +9,7 @@ import '../core/router/app_router.dart';
 import '../core/di/app_di.dart';
 import '../widgets/gradient_button.dart';
 import '../widgets/responsive_layout.dart';
+import '../widgets/thread_loader.dart';
 
 /// Home/Landing screen
 class HomeScreen extends StatefulWidget {
@@ -32,7 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
         bloc: getIt<ProfileCubit>(),
         builder: (context, state) {
           if (state is ProfileLoading) {
-            return const Center(child: CircularProgressIndicator());
+            return const Center(child: ThreadLoader());
           }
 
           if (state is ProfileError) {

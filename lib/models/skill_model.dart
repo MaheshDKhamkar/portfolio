@@ -41,9 +41,9 @@ class SkillModel {
   /// Proficiency percentage (0 to 100)
   int get proficiencyPercentage => (proficiency * 100).round();
 
-  /// Sample skills data
+  /// Skills data
   static List<SkillModel> get samples => [
-    // Languages
+    // Programming Languages
     const SkillModel(
       name: 'Dart',
       proficiency: 0.95,
@@ -51,22 +51,22 @@ class SkillModel {
       icon: Icons.code,
     ),
     const SkillModel(
-      name: 'JavaScript',
+      name: 'Java',
       proficiency: 0.85,
       category: SkillCategory.languages,
-      icon: Icons.javascript,
-    ),
-    const SkillModel(
-      name: 'Python',
-      proficiency: 0.75,
-      category: SkillCategory.languages,
       icon: Icons.code,
     ),
     const SkillModel(
-      name: 'TypeScript',
-      proficiency: 0.80,
+      name: 'HTML',
+      proficiency: 0.90,
       category: SkillCategory.languages,
-      icon: Icons.code,
+      icon: Icons.html,
+    ),
+    const SkillModel(
+      name: 'CSS',
+      proficiency: 0.88,
+      category: SkillCategory.languages,
+      icon: Icons.css,
     ),
 
     // Frameworks & Libraries
@@ -77,22 +77,46 @@ class SkillModel {
       icon: Icons.flutter_dash,
     ),
     const SkillModel(
-      name: 'React',
-      proficiency: 0.80,
-      category: SkillCategory.frameworks,
-      icon: Icons.web,
-    ),
-    const SkillModel(
-      name: 'Node.js',
-      proficiency: 0.75,
-      category: SkillCategory.frameworks,
-      icon: Icons.storage,
-    ),
-    const SkillModel(
-      name: 'BLoC/Cubit',
+      name: 'Firebase',
       proficiency: 0.90,
       category: SkillCategory.frameworks,
-      icon: Icons.architecture,
+      icon: Icons.cloud,
+    ),
+    const SkillModel(
+      name: 'RESTful APIs',
+      proficiency: 0.92,
+      category: SkillCategory.frameworks,
+      icon: Icons.api,
+    ),
+    const SkillModel(
+      name: 'Google Maps API',
+      proficiency: 0.85,
+      category: SkillCategory.frameworks,
+      icon: Icons.map,
+    ),
+    const SkillModel(
+      name: 'Razorpay SDK',
+      proficiency: 0.80,
+      category: SkillCategory.frameworks,
+      icon: Icons.payment,
+    ),
+    const SkillModel(
+      name: 'JSON',
+      proficiency: 0.95,
+      category: SkillCategory.frameworks,
+      icon: Icons.data_object,
+    ),
+    const SkillModel(
+      name: 'XML',
+      proficiency: 0.85,
+      category: SkillCategory.frameworks,
+      icon: Icons.description,
+    ),
+    const SkillModel(
+      name: 'GetX',
+      proficiency: 0.90,
+      category: SkillCategory.frameworks,
+      icon: Icons.settings_input_component,
     ),
     const SkillModel(
       name: 'Provider',
@@ -100,57 +124,87 @@ class SkillModel {
       category: SkillCategory.frameworks,
       icon: Icons.settings_input_component,
     ),
-
-    // Tools & Technologies
     const SkillModel(
-      name: 'Firebase',
+      name: 'BLoC',
       proficiency: 0.90,
+      category: SkillCategory.frameworks,
+      icon: Icons.architecture,
+    ),
+
+    // Development Tools & Technologies
+    const SkillModel(
+      name: 'Android Studio',
+      proficiency: 0.92,
       category: SkillCategory.tools,
-      icon: Icons.cloud,
+      icon: Icons.android,
     ),
     const SkillModel(
-      name: 'Git & GitHub',
+      name: 'Xcode',
+      proficiency: 0.85,
+      category: SkillCategory.tools,
+      icon: Icons.apple,
+    ),
+    const SkillModel(
+      name: 'Visual Studio Code',
+      proficiency: 0.95,
+      category: SkillCategory.tools,
+      icon: Icons.code,
+    ),
+    const SkillModel(
+      name: 'Git',
       proficiency: 0.92,
       category: SkillCategory.tools,
       icon: Icons.source,
     ),
     const SkillModel(
-      name: 'REST APIs',
+      name: 'GitHub',
       proficiency: 0.90,
       category: SkillCategory.tools,
-      icon: Icons.api,
+      icon: Icons.source,
     ),
     const SkillModel(
-      name: 'GraphQL',
-      proficiency: 0.70,
+      name: 'Bitbucket',
+      proficiency: 0.85,
       category: SkillCategory.tools,
-      icon: Icons.api,
+      icon: Icons.source,
     ),
     const SkillModel(
-      name: 'Docker',
-      proficiency: 0.65,
+      name: 'JIRA',
+      proficiency: 0.85,
       category: SkillCategory.tools,
-      icon: Icons.developer_board,
+      icon: Icons.assignment,
     ),
     const SkillModel(
-      name: 'CI/CD',
-      proficiency: 0.75,
+      name: 'Slack',
+      proficiency: 0.88,
+      category: SkillCategory.tools,
+      icon: Icons.chat,
+    ),
+    const SkillModel(
+      name: 'Figma',
+      proficiency: 0.85,
+      category: SkillCategory.tools,
+      icon: Icons.brush,
+    ),
+    const SkillModel(
+      name: 'Postman',
+      proficiency: 0.90,
+      category: SkillCategory.tools,
+      icon: Icons.http,
+    ),
+    const SkillModel(
+      name: 'CI/CD (GitHub Actions)',
+      proficiency: 0.80,
       category: SkillCategory.tools,
       icon: Icons.settings_applications,
     ),
 
     // Design & UI/UX
     const SkillModel(
-      name: 'UI/UX Design',
-      proficiency: 0.85,
+      name: 'Responsive UI',
+      proficiency: 0.92,
       category: SkillCategory.design,
-      icon: Icons.design_services,
-    ),
-    const SkillModel(
-      name: 'Figma',
-      proficiency: 0.82,
-      category: SkillCategory.design,
-      icon: Icons.brush,
+      icon: Icons.devices,
     ),
     const SkillModel(
       name: 'Material Design',
@@ -158,20 +212,8 @@ class SkillModel {
       category: SkillCategory.design,
       icon: Icons.palette,
     ),
-    const SkillModel(
-      name: 'Responsive Design',
-      proficiency: 0.92,
-      category: SkillCategory.design,
-      icon: Icons.devices,
-    ),
 
-    // Other Skills
-    const SkillModel(
-      name: 'Agile/Scrum',
-      proficiency: 0.85,
-      category: SkillCategory.other,
-      icon: Icons.groups,
-    ),
+    // Core Competencies & Other Skills
     const SkillModel(
       name: 'Clean Architecture',
       proficiency: 0.90,
@@ -179,10 +221,28 @@ class SkillModel {
       icon: Icons.architecture,
     ),
     const SkillModel(
-      name: 'Testing',
-      proficiency: 0.80,
+      name: 'API Integration',
+      proficiency: 0.92,
+      category: SkillCategory.other,
+      icon: Icons.integration_instructions,
+    ),
+    const SkillModel(
+      name: 'Debugging',
+      proficiency: 0.90,
       category: SkillCategory.other,
       icon: Icons.bug_report,
+    ),
+    const SkillModel(
+      name: 'Performance Optimization',
+      proficiency: 0.88,
+      category: SkillCategory.other,
+      icon: Icons.speed,
+    ),
+    const SkillModel(
+      name: 'App Lifecycle Management',
+      proficiency: 0.85,
+      category: SkillCategory.other,
+      icon: Icons.autorenew,
     ),
   ];
 

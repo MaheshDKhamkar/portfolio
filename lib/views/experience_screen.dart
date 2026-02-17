@@ -4,6 +4,7 @@ import '../cubits/experience_cubit.dart';
 import '../cubits/experience_state.dart';
 import '../core/di/app_di.dart';
 import '../widgets/timeline_item.dart';
+import '../widgets/thread_loader.dart';
 
 /// Experience screen
 class ExperienceScreen extends StatefulWidget {
@@ -28,7 +29,7 @@ class _ExperienceScreenState extends State<ExperienceScreen> {
         bloc: getIt<ExperienceCubit>(),
         builder: (context, state) {
           if (state is ExperienceLoading) {
-            return const Center(child: CircularProgressIndicator());
+            return const Center(child: ThreadLoader());
           }
 
           if (state is ExperienceError) {

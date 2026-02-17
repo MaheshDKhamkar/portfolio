@@ -28,10 +28,13 @@ class ExperienceModel {
     return '$start - $end';
   }
 
-  /// Calculate duration in months
+  /// Calculate duration in months (inclusive of both start and end months)
   int get durationInMonths {
     final end = endDate ?? DateTime.now();
-    return ((end.year - startDate.year) * 12) + (end.month - startDate.month);
+    // Add 1 to include both start and end months
+    return ((end.year - startDate.year) * 12) +
+        (end.month - startDate.month) +
+        1;
   }
 
   /// Duration display string (e.g., "2 years 3 months")
@@ -67,66 +70,48 @@ class ExperienceModel {
     return '${months[date.month - 1]} ${date.year}';
   }
 
-  /// Sample experience data
+  /// Experience data
   static List<ExperienceModel> get samples => [
     ExperienceModel(
-      companyName: 'TechCorp Solutions',
+      companyName: 'ReapMind Innovations',
       position: 'Senior Flutter Developer',
-      startDate: DateTime(2023, 6, 1),
+      startDate: DateTime(2025, 2, 1),
       endDate: null, // Current position
-      location: 'San Francisco, CA',
+      location: 'Kolhapur, Maharashtra',
       responsibilities: [
-        'Led a team of 4 developers in building cross-platform mobile applications',
-        'Architected and implemented scalable Flutter apps using clean architecture and BLoC',
-        'Reduced app startup time by 40% through performance optimizations',
-        'Mentored junior developers and conducted code reviews',
-        'Integrated CI/CD pipelines with automated testing and deployment',
+        'Developing and maintaining scalable production-ready Flutter applications',
+        'Implementing complex UI flows, REST API integrations, and state management solutions',
+        'Collaborating with backend engineers and product teams to deliver new features efficiently',
+        'Optimizing application performance and resolving production-level issues',
       ],
-      companyLogoPath: 'assets/images/companies/techcorp.png',
+      companyLogoPath: 'assets/images/companies/reapmind.png',
     ),
     ExperienceModel(
-      companyName: 'InnovateTech Inc.',
+      companyName: 'Zerovaega Technologies',
       position: 'Flutter Developer',
-      startDate: DateTime(2022, 1, 15),
-      endDate: DateTime(2023, 5, 31),
-      location: 'Remote',
+      startDate: DateTime(2024, 5, 1),
+      endDate: DateTime(2025, 2, 28),
+      location: 'Kolhapur, Maharashtra',
       responsibilities: [
-        'Developed and maintained 3 production Flutter applications',
-        'Implemented state management using BLoC and Provider patterns',
-        'Integrated Firebase services including Authentication, Firestore, and Cloud Functions',
-        'Collaborated with designers to create pixel-perfect, responsive UIs',
-        'Achieved 98% crash-free rate across all deployed applications',
+        'Built and enhanced multiple Flutter applications using clean and maintainable code practices',
+        'Integrated RESTful APIs and implemented secure authentication flows',
+        'Developed custom UI components and animations as per design requirements',
+        'Fixed critical production bugs and improved overall user experience',
       ],
-      companyLogoPath: 'assets/images/companies/innovatetech.png',
+      companyLogoPath: 'assets/images/companies/zerovaega.png',
     ),
     ExperienceModel(
-      companyName: 'StartupHub',
+      companyName: 'ReapMind Innovations',
       position: 'Junior Flutter Developer',
-      startDate: DateTime(2021, 7, 1),
-      endDate: DateTime(2022, 1, 10),
-      location: 'New York, NY',
+      startDate: DateTime(2022, 9, 1),
+      endDate: DateTime(2024, 4, 30),
+      location: 'Kolhapur, Maharashtra',
       responsibilities: [
-        'Built features for a social networking mobile application',
-        'Worked on REST API integration and data persistence',
-        'Implemented responsive UI designs for multiple screen sizes',
-        'Fixed bugs and improved app performance',
-        'Participated in agile development with 2-week sprints',
+        'Developed Flutter applications from scratch and contributed to core application modules',
+        'Worked extensively on REST API integration, UI development, and local data storage',
+        'Collaborated closely with QA and design teams to ensure smooth releases',
       ],
-      companyLogoPath: 'assets/images/companies/startuphub.png',
-    ),
-    ExperienceModel(
-      companyName: 'CodeCraft Solutions (Internship)',
-      position: 'Mobile Development Intern',
-      startDate: DateTime(2021, 1, 1),
-      endDate: DateTime(2021, 6, 30),
-      location: 'Boston, MA',
-      responsibilities: [
-        'Learned Flutter framework and Dart programming language',
-        'Contributed to internal tools and proof-of-concept applications',
-        'Assisted senior developers with testing and debugging',
-        'Participated in code reviews and team meetings',
-      ],
-      companyLogoPath: 'assets/images/companies/codecraft.png',
+      companyLogoPath: 'assets/images/companies/reapmind.png',
     ),
   ];
 

@@ -4,6 +4,7 @@ import '../cubits/profile_cubit.dart';
 import '../cubits/profile_state.dart';
 import '../core/di/app_di.dart';
 import '../widgets/glass_card.dart';
+import '../widgets/thread_loader.dart';
 
 /// About Me screen
 class AboutScreen extends StatefulWidget {
@@ -28,7 +29,7 @@ class _AboutScreenState extends State<AboutScreen> {
         bloc: getIt<ProfileCubit>(),
         builder: (context, state) {
           if (state is ProfileLoading) {
-            return const Center(child: CircularProgressIndicator());
+            return const Center(child: ThreadLoader());
           }
 
           if (state is ProfileError) {

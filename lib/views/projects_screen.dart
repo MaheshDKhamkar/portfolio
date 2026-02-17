@@ -4,6 +4,7 @@ import '../cubits/projects_cubit.dart';
 import '../cubits/projects_state.dart';
 import '../core/di/app_di.dart';
 import '../widgets/project_card.dart';
+import '../widgets/thread_loader.dart';
 
 /// Projects screen
 class ProjectsScreen extends StatefulWidget {
@@ -28,7 +29,7 @@ class _ProjectsScreenState extends State<ProjectsScreen> {
         bloc: getIt<ProjectsCubit>(),
         builder: (context, state) {
           if (state is ProjectsLoading) {
-            return const Center(child: CircularProgressIndicator());
+            return const Center(child: ThreadLoader());
           }
 
           if (state is ProjectsError) {

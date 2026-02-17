@@ -24,25 +24,21 @@ class ProfileModel {
 
   /// Sample data for demonstration
   static ProfileModel get sample => ProfileModel(
-    name: 'John Doe',
+    name: 'Mahesh Khamkar',
     title: 'Senior Flutter Developer',
     yearsOfExperience: 3.5,
     bio:
-        '''Passionate Flutter developer with 3.5+ years of experience building beautiful, 
-high-performance mobile and web applications. Specialized in clean architecture, 
-state management, and creating pixel-perfect UIs that users love.
-
-Expertise in Flutter, Dart, Firebase, REST APIs, and modern app development 
-practices. Strong advocate for clean code, testing, and continuous learning.''',
+        '''Passionate Flutter Developer with 3.5+ years of professional experience in building scalable, high-performance cross-platform applications for Android, iOS, and the Web. Skilled in Flutter, Dart, RESTful APIs, Firebase, and state-management solutions including GetX, Provider, and BLoC.
+Experienced in developing production-ready applications from scratch, implementing complex business logic, real-time features, video calling, and multilingual support. Strong foundation in Clean Architecture, performance optimization, and delivering maintainable, user-focused applications published on the Play Store and App Store.''',
     profileImagePath: 'assets/images/profile.png',
-    email: 'john.doe@example.com',
-    phone: '+1 (555) 123-4567',
-    location: 'San Francisco, CA',
+    email: 'maheshkhamkar92@gmail.com',
+    phone: '+91 8623029055',
+    location: 'Jawahar Nagar, Ichalkaranji, Maharashtra, India',
     socialLinks: {
-      'github': 'https://github.com/johndoe',
-      'linkedin': 'https://www.linkedin.com/in/johndoe',
-      'twitter': 'https://twitter.com/johndoe',
-      'medium': 'https://medium.com/@johndoe',
+      // 'github': 'https://github.com/johndoe',
+      'linkedin': 'https://www.linkedin.com/in/mahesh-khamkar',
+      // 'twitter': 'https://twitter.com/johndoe',
+      // 'medium': 'https://medium.com/@johndoe',
     },
   );
 

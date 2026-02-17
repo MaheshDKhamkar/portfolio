@@ -3,6 +3,7 @@ import '../models/contact_info_model.dart';
 import '../core/di/app_di.dart';
 import '../controllers/contact_controller.dart';
 import '../widgets/gradient_button.dart';
+import '../widgets/thread_loader.dart';
 
 /// Contact screen
 class ContactScreen extends StatefulWidget {
@@ -128,7 +129,7 @@ class _ContactScreenState extends State<ContactScreen> {
               ),
               const SizedBox(height: 32),
               _isSubmitting
-                  ? const Center(child: CircularProgressIndicator())
+                  ? const Center(child: ThreadLoader(size: 50))
                   : GradientButton(
                       onPressed: _submitForm,
                       text: 'Send Message',

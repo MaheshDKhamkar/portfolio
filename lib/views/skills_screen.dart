@@ -5,6 +5,7 @@ import '../cubits/skills_state.dart';
 import '../core/di/app_di.dart';
 import '../models/skill_model.dart';
 import '../widgets/skill_indicator.dart';
+import '../widgets/thread_loader.dart';
 
 /// Skills screen
 class SkillsScreen extends StatefulWidget {
@@ -29,7 +30,7 @@ class _SkillsScreenState extends State<SkillsScreen> {
         bloc: getIt<SkillsCubit>(),
         builder: (context, state) {
           if (state is SkillsLoading) {
-            return const Center(child: CircularProgressIndicator());
+            return const Center(child: ThreadLoader());
           }
 
           if (state is SkillsError) {
